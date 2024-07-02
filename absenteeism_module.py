@@ -26,7 +26,7 @@ class CustomScaler(BaseEstimator, TransformerMixin):
         return pd.concat([X_not_scaled, X_scaled], axis=1)[init_col_order]
 
 # create the special class that we are going to use from here on to predict new data
-class absenteeism_model(): 
+class absenteeism_model():
     def __init__(self, model_file, scaler_file):
         # read the 'model' and 'scaler' files which were saved
         with open(model_file, 'rb') as model_file, open(scaler_file, 'rb') as scaler_file:
